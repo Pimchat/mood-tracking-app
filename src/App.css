@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+main {
+  background-color: var(--dark-theme-scale-1);
+  color: var(--dark-theme-font-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-bar {
+  grid-area: top-bar;
+  background-color: var(--dark-theme-scale-5);
+  display: flex;
+  justify-content: flex-end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navigation-section {
+  grid-area: nav-section;
+  background-color: var(--dark-theme-scale-4);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.content-section {
+  grid-area: content-section;
+  background-color: var(--dark-theme-scale-5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  grid-area: footer;
+  background-color: black;
+  Background: var(--dark-theme-scale-5);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 8vh 87vh 5vh;
+  grid-template-areas: 
+    "nav-section top-bar top-bar top-bar"
+    "nav-section content-section content-section content-section"
+    "footer footer footer footer";
 }
