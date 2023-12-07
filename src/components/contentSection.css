@@ -1,3 +1,13 @@
 .page-name {
     font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.content-section {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 20px 74px 0 94px;
+    display: flex;
+    flex-direction: column;
 }

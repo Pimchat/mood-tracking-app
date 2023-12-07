@@ -1,40 +1,5 @@
-main {
-  background-color: var(--dark-theme-scale-1);
-  color: var(--dark-theme-font-color);
-}
-
-.top-bar {
-  grid-area: top-bar;
-  background-color: var(--dark-theme-scale-5);
-  display: flex;
-  justify-content: flex-end;
-}
-
-.navigation-section {
-  grid-area: nav-section;
-  background-color: var(--dark-theme-scale-4);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.content-section {
-  grid-area: content-section;
-  background-color: var(--dark-theme-scale-5);
-}
-
-.footer {
-  grid-area: footer;
-  background-color: black;
-  Background: var(--dark-theme-scale-5);
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 8vh 87vh 5vh;
-  grid-template-areas: 
-    "nav-section top-bar top-bar top-bar"
-    "nav-section content-section content-section content-section"
-    "footer footer footer footer";
+.slot {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

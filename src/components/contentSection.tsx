@@ -1,9 +1,12 @@
 import './contentSection.css';
+import Dashboard from '../pages/dashboard';
+
+const pageName = "Dashboard";
 
 const ContentSection = () => {
     return <div className='content-section'>
-        <div className='page-name'>Page Name</div>
-        <div>c o n t e n t . . .</div>
+        <h2 className='page-name'>{pageName}</h2>
+        <Dashboard />
     </div>
 }
 

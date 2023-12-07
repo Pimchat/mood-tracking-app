@@ -1,8 +1,17 @@
-.nav-items {
+.drawer-arrow {
+    position: fixed;
+    width: 34px;
+    height: 34px;
+    margin: 20px 0 0 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #dd47ca;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.nav-logo {
-    height: 8vh;
+.drawer-arrow:hover {
+    background-color: #fd8eee;
+    cursor: pointer;
 }
