@@ -3,9 +3,12 @@ import './App.css';
 import ContentSection from './components/contentSection';
 import Footer from './components/footer';
 import TopBar from './components/topBar';
+import SignIn from './pages/signIn';
+import SignUp from './pages/signUp';
 import { ThemeProvider } from '@mui/material/styles';
 import createTheme from '@mui/material/styles/createTheme';
 import SwipeableTemporaryDrawer from './components/drawer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
@@ -32,12 +35,18 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className='slot'>
       <TopBar />
       <SwipeableTemporaryDrawer />
-      <ContentSection />
-      <Footer />
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Footer />}></Route>
+          <Route path="/signin" element={<SignIn />}></Route>
+          <Route path="/register" element={<SignUp />}></Route>
+          <Route path="/dashboard" element={<ContentSection />}></Route>
+          <Route path="/moodtracking" element={<ContentSection />}></Route>
+          <Route path="/recognition" element={<ContentSection />}></Route>
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }
