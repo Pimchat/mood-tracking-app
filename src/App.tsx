@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
 import ContentSection from './components/contentSection';
-import Footer from './components/footer';
 import TopBar from './components/topBar';
 import SignIn from './pages/signIn';
 import SignUp from './pages/signUp';
+import Home from './pages/home';
+import MoodTracking from './pages/moodTracking';
+import MyAchievements from './pages/myAchievements';
+import RecognitionHub from './pages/recognitionHub';
 import { ThemeProvider } from '@mui/material/styles';
 import createTheme from '@mui/material/styles/createTheme';
 import SwipeableTemporaryDrawer from './components/drawer';
@@ -39,12 +42,13 @@ function App() {
       <SwipeableTemporaryDrawer />
       <Router>
         <Routes>
-          <Route path="/" element={<Footer />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/signin" element={<SignIn />}></Route>
           <Route path="/register" element={<SignUp />}></Route>
           <Route path="/dashboard" element={<ContentSection />}></Route>
-          <Route path="/moodtracking" element={<ContentSection />}></Route>
-          <Route path="/recognition" element={<ContentSection />}></Route>
+          <Route path="/moodtracking" element={<MoodTracking />}></Route>
+          <Route path="/myachievements" element={<MyAchievements />}></Route>
+          <Route path="/recognitionhub" element={<RecognitionHub />}></Route>
         </Routes>
       </Router>
     </ThemeProvider>
