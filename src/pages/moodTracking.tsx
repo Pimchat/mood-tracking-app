@@ -1,5 +1,7 @@
+import MyCalendar from '../components/calendar';
+
 export default function MoodTracking() {
     return <div className='mood-tracking'>
-        calendar
+        <MyCalendar />
       </div>
 }
