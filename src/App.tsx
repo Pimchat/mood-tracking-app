@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import ContentSection from './components/contentSection';
+import Demopopup from './pages/demoPopup';
 import TopBar from './components/topBar';
 import SignIn from './pages/signIn';
 import SignUp from './pages/signUp';
@@ -49,6 +50,7 @@ function App() {
           <Route path="/moodtracking" element={<MoodTracking />}></Route>
           <Route path="/myachievements" element={<MyAchievements />}></Route>
           <Route path="/recognitionhub" element={<RecognitionHub />}></Route>
+          <Route path="/testpopup" element={<Demopopup />}></Route>
         </Routes>
       </Router>
     </ThemeProvider>
