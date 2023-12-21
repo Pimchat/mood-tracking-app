@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import ContentSection from './components/contentSection';
 import Demopopup from './pages/demoPopup';
-import TopBar from './components/topBar';
+import NewTopBar from './components/newTopBar';
 import SignIn from './pages/signIn';
 import SignUp from './pages/signUp';
 import Home from './pages/home';
@@ -11,8 +11,8 @@ import MyAchievements from './pages/myAchievements';
 import RecognitionHub from './pages/recognitionHub';
 import { ThemeProvider } from '@mui/material/styles';
 import createTheme from '@mui/material/styles/createTheme';
-import SwipeableTemporaryDrawer from './components/drawer';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import NewSideBar from './components/newSideBar';
 
 const theme = createTheme({
   palette: {
@@ -39,20 +39,22 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <TopBar />
-      <SwipeableTemporaryDrawer />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/signin" element={<SignIn />}></Route>
-          <Route path="/register" element={<SignUp />}></Route>
-          <Route path="/dashboard" element={<ContentSection />}></Route>
-          <Route path="/moodtracking" element={<MoodTracking />}></Route>
-          <Route path="/myachievements" element={<MyAchievements />}></Route>
-          <Route path="/recognitionhub" element={<RecognitionHub />}></Route>
-          <Route path="/testpopup" element={<Demopopup />}></Route>
-        </Routes>
-      </Router>
+      <div className='app-container'>
+        <NewSideBar />
+        <div className='content-container'>
+        <NewTopBar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/signin" element={<SignIn />}></Route>
+            <Route path="/register" element={<SignUp />}></Route>
+            <Route path="/dashboard" element={<ContentSection />}></Route>
+            <Route path="/moodtracking" element={<MoodTracking />}></Route>
+            <Route path="/myachievements" element={<MyAchievements />}></Route>
+            <Route path="/recognitionhub" element={<RecognitionHub />}></Route>
+            <Route path="/testpopup" element={<Demopopup />}></Route>
+          </Routes>
+        </div>
+      </div>
     </ThemeProvider>
   );
 }

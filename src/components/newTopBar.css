@@ -1,0 +1,13 @@
+.topbar-container {
+    height: 3rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px black;
+}
+
+.right-topbar {
+    display: flex;
+    gap: 1rem;
+}

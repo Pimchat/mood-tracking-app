@@ -14,17 +14,4 @@ code {
 
 :root {
   font-size: 16px; /* Set the root font size to 16px */
-  /*Colors for light theme*/
-  --light-theme-bg: #111111;
-  --light-theme-primary: #777777;
-  --light-theme-secondary: #C0C0C0;
-  --light-theme-accent: #F8D6FA;
-  --light-theme-font-color: #555555;
-  /*Colors for dark theme*/
-  --dark-theme-scale-5: #000000;
-  --dark-theme-scale-4: #0d1117;
-  --dark-theme-scale-3: #161b22;
-  --dark-theme-scale-2: #30363d;
-  --dark-theme-scale-1: #F25287;
-  --dark-theme-font-color: #ffffff;
 }
